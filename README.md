@@ -22,8 +22,8 @@ Ensure you have [Go](https://go.dev/) installed (1.16+ required for `//go:embed`
 
 Clone the repository and build the binary:
 ```bash
-git clone https://github.com/yourusername/neko.git
-cd neko
+git clone https://github.com/ankitshuxe/neko.exe.git
+cd neko.exe
 go build -o neko .
 ```
 *(Tip: Move the `neko` binary into your system's PATH to run it from anywhere!)*
