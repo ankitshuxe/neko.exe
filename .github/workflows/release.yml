@@ -70,3 +70,15 @@ jobs:
         with:
           files: bin/**/*
           generate_release_notes: true
+
+  publish-winget:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish to Winget
+        uses: vedantmgoyal2009/winget-releaser@v2
+        with:
+          identifier: ankitshuxe.Neko
+          installers-regex: '\.exe$'
+          token: ${{ secrets.WINGET_TOKEN }}
+
