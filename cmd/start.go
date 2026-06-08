@@ -57,7 +57,8 @@ func (m timerModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			
 			history, err := storage.LoadHistory()
 			if err == nil {
-				if m.sessionType != "break" && history.FishCoins > 0 {
+				elapsedSeconds := m.totalSeconds - m.remaining
+				if m.sessionType != "break" && history.FishCoins > 0 && elapsedSeconds > 600 {
 					history.FishCoins--
 				}
 				for i := range history.Sessions {
@@ -339,7 +340,7 @@ var startCmd = &cobra.Command{
 			fmt.Println(redStyle.Render("\n    (=>.<=) Session canceled."))
 
 			penaltyMsg := ""
-			if oldHistory.FishCoins > 0 {
+			if oldHistory.FishCoins > history.FishCoins {
 				penaltyMsg = " (-1 Fish Coin Penalty)"
 			}
 
@@ -349,17 +350,18 @@ var startCmd = &cobra.Command{
 		} else if fm.status == "rested" {
 			_ = beeep.Notify("Meow!", "Session completed!", "")
 			_ = beeep.Beep(beeep.DefaultFreq, beeep.DefaultDuration)
+			coinsEarned := minutes / 25
 			for i := range history.Sessions {
 				if history.Sessions[i].ID == session.ID {
 					history.Sessions[i].Status = "rested"
 					history.TotalFocusMinutes += minutes
-					history.FishCoins += minutes
+					history.FishCoins += coinsEarned
 					_ = storage.SaveHistory(history)
 					break
 				}
 			}
 			greenStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#F05522"))
-			fmt.Println(greenStyle.Render(fmt.Sprintf("\n    (=^ω^=) Session completed! +%d Fish Coins", minutes)))
+			fmt.Println(greenStyle.Render(fmt.Sprintf("\n    (=^ω^=) Session completed! +%d Fish Coins", coinsEarned)))
 		}
 	},
 }

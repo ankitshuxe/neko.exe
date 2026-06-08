@@ -23,7 +23,7 @@ var rootCmd = &cobra.Command{
 `
 		fmt.Println(titleStyle.Render(asciiArt))
 		
-		fmt.Println(cmdStyle.Render("  neko start [minutes]") + descStyle.Render("  - Start a focus session (default 25m). Earn 1 Fish Coin per minute!"))
+		fmt.Println(cmdStyle.Render("  neko start [minutes]") + descStyle.Render("  - Start a focus session (default 25m). Earn 1 Fish Coin per 25 minutes!"))
 		fmt.Println(descStyle.Render("                           Flags: -t <tag> (e.g. coding), -s <sound> (purr, rain, lofi)"))
 		fmt.Println(cmdStyle.Render("  neko break [minutes]") + descStyle.Render("  - Start a break. Your cat goes to sleep."))
 		fmt.Println(cmdStyle.Render("  neko shop") + descStyle.Render("             - View the shop, your Fish Coins, and buy new toys/environments/breeds."))
