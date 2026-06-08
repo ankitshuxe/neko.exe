@@ -12,14 +12,14 @@ var rootCmd = &cobra.Command{
 	Use:   "neko",
 	Short: "A cozy, terminal-based Pomodoro timer",
 	Run: func(cmd *cobra.Command, args []string) {
-		titleStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#FFD700")).Bold(true)
-		cmdStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#00FF00")).Bold(true)
-		descStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#EADDCE"))
+		titleStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#F05522")).Bold(true)
+		cmdStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#F05522")).Bold(true)
+		descStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#E4D8C8"))
 
 		asciiArt := `
     /\_/\
-   ( o.o )  Welcome to Neko!
-    > ^ <   Your cozy, terminal-based Pomodoro pet.
+   ( o.o )  Welcome to Neko.exe!
+    > ^ <   Your strictly CLI-based Pomodoro companion.
 `
 		fmt.Println(titleStyle.Render(asciiArt))
 		

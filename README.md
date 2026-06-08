@@ -1,78 +1,80 @@
 <div align="center">
   <h1>[neko.exe]</h1>
-  <p><b>A cozy, gamified, terminal-based Pomodoro pet.</b></p>
+  <p><b>TERMINAL-NATIVE POMODORO COMPANION</b></p>
   
   [![Go Report Card](https://goreportcard.com/badge/github.com/ankitshuxe/neko.exe)](https://goreportcard.com/report/github.com/ankitshuxe/neko.exe)
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-F05522.svg)](https://opensource.org/licenses/MIT)
   [![Build Status](https://github.com/ankitshuxe/neko.exe/actions/workflows/ci.yml/badge.svg)](https://github.com/ankitshuxe/neko.exe/actions)
-  [![Winget](https://img.shields.io/badge/Winget-Available-blue)](https://github.com/microsoft/winget-pkgs)
+  [![Winget](https://img.shields.io/badge/Winget-Available-1A1A1A)](https://github.com/microsoft/winget-pkgs)
 </div>
 
 <br/>
 
-**Neko** transforms your standard terminal into a relaxing, highly-customizable Pomodoro timer. It blends productivity tracking with "Tamagotchi-style" virtual pet mechanics, ambient background sounds, and gorgeous ASCII art to help you maintain focus and prevent burnout.
+**Abandon the browser.** `neko.exe` is a strictly CLI-based productivity companion engineered for developers who demand zero electron bloat. Execute flawless 25-minute focus intervals directly from your shell, earn Fish Coins, and unlock ASCII environments. 
 
 ---
 
-## Features
+## // STRICT INTERVAL PROTOCOLS
 
-- **Gamified Focus**: Earn 1 "Fish Coin" for every minute of uninterrupted focus time. But beware, canceling your session early will startle the cat and cost you a coin!
-- **The Neko Shop**: Spend your hard-earned Fish Coins to unlock up to 30 unique items, including new Cat Breeds (Sphynx, Persian, Galactic), Environments (Cardboard Castle, Window Sill), and Toys (Laser Pointer, Yarn Ball).
-- **Dynamic ASCII Art**: Your equipped breed, toy, and environment dynamically change how your timer looks. Watch your cat play while you work and sleep when you take a break!
-- **Built-in Ambience**: Play perfectly-looped offline white noise (`purr`, `rain`, `lofi`) natively in the terminal without opening a browser.
-- **Deep Analytics**: Track your productivity through an organized daily diary, a 30-day percentage-based bar chart, and a weekly "GitHub-style" contribution grid.
+- **Gamified Accountability**: Earn 1 "Fish Coin" for every minute of uninterrupted deep work. But beware: interrupting your session (Ctrl+C) triggers a "startled" penalty, immediately deducting hard-earned currency. Focus is mandatory.
+- **The ASCII Marketplace**: Spend your Fish Coins to unlock up to 30 unique tactical upgrades. Exchange currency for new Cat Breeds (Sphynx, Persian, Galactic), Environments (Cardboard Castle, Window Sill), and Toys (Laser Pointer, Yarn Ball).
+- **Dynamic Terminal UI**: Your equipped breed, toy, and environment dynamically change the ASCII layout. Watch your terminal cat play while you work, and sleep when you take a break.
+- **Offline Audio Ambience**: Play perfectly-looped offline white noise (`purr`, `rain`, `lofi`) natively in the terminal. No browser tabs required.
+- **Deep Analytics**: Track your productivity through an organized daily diary, a 30-day percentage-based bar chart, and a weekly GitHub-style contribution grid.
 
 ---
 
-## Installation
+## // DEPLOYMENT VECTORS
 
-There are multiple ways to install Neko depending on your platform and preferences.
+Select your preferred package manager to initiate the installation sequence.
 
-### Windows (Winget) - *Recommended*
-The easiest way to install Neko on Windows is via the official Windows Package Manager:
+### 01. GOLANG
+```bash
+go install github.com/ankitshuxe/neko.exe@latest
+```
+
+### 02. WINDOWS
 ```bash
 winget install ankitshuxe.Neko
 ```
 
-### From GitHub Releases (macOS, Linux, Windows)
-Pre-compiled binaries are available for all major operating systems.
-1. Navigate to the [Releases page](../../releases/latest).
-2. Download the binary for your OS and architecture.
-3. Extract it and move it to a folder in your system's `PATH`.
+### 03. MACOS / LINUX
+```bash
+brew install ankitshuxe/tap/neko
+```
 
-### Build from Source (Go)
+### BUILD FROM SOURCE
 Ensure you have [Go](https://go.dev/) 1.21+ installed.
 ```bash
 git clone https://github.com/ankitshuxe/neko.exe.git
 cd neko.exe
 make build
-# or if you don't have make: go build -o neko .
 ```
 
 ---
 
-## How to Play (Usage)
+## // EXECUTION COMMANDS
 
-Simply run `neko` with no arguments to see the beautiful welcome dashboard!
+Simply run `neko` with no arguments to see the ASCII welcome dashboard.
 
-### Timers
-- **Start a Focus Session**: `neko start [minutes]`
-  - Example: `neko start 45 -t coding -s rain`
-  - Flags: `-t` to tag your session, `-s` to play ambient sound (`purr`, `rain`, `lofi`).
-- **Start a Break**: `neko break [minutes]`
+### TIMERS
+- **Initiate Focus Session**: `neko start [minutes]`
+  - *Example:* `neko start 45 -t coding -s rain`
+  - *Flags:* `-t` to tag your session, `-s` to play ambient sound (`purr`, `rain`, `lofi`).
+- **Initiate Break Protocol**: `neko break [minutes]`
   - Let your cat take a nap.
 
 *(During any session, press `p` to pause/resume, or `q` to quit).*
 
-### Economy & Customization
-- **View the Shop**: `neko shop`
-  - See your Fish Coin balance and browse the available items.
-- **Buy an Item**: `neko shop buy [item_id]`
-  - Example: `neko shop buy breed_siamese`
-- **Equip an Item**: `neko shop equip [item_id]`
-  - Swap out your current breed, toy, or environment to customize your active timer!
+### ECONOMY & CUSTOMIZATION
+- **View The Shop**: `neko shop`
+  - See your Fish Coin balance and browse the available tactical upgrades.
+- **Execute Purchase**: `neko shop buy [item_id]`
+  - *Example:* `neko shop buy breed_siamese`
+- **Equip Item**: `neko shop equip [item_id]`
+  - Swap out your current breed, toy, or environment to customize your active timer.
 
-### Analytics
+### ANALYTICS
 - **Daily Log**: `neko diary`
   - View today's focus blocks grouped by your custom tags.
 - **Monthly Stats**: `neko stats`
@@ -80,7 +82,7 @@ Simply run `neko` with no arguments to see the beautiful welcome dashboard!
 
 ---
 
-## Data Persistence & Security
+## // SECURE DATA PERSISTENCE
 
 Your coins, shop inventory, and focus history are automatically saved securely in your computer's native user configuration directory (e.g., `~/.config/neko/history.json` or `%AppData%\neko\history.json`).
 
@@ -88,6 +90,6 @@ Your coins, shop inventory, and focus history are automatically saved securely i
 
 ---
 
-## Contributing
+## // CONTRIBUTING
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](../../issues).
 Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.

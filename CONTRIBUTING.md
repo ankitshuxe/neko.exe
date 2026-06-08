@@ -1,27 +1,35 @@
-# Contributing to Neko 🐾
+# [neko.exe] // CONTRIBUTION PROTOCOLS
 
-First off, thank you for considering contributing to Neko! It's people like you that make open source such a great community.
+Access to the `[neko.exe]` source code implies adherence to strict engineering standards. We welcome patches, tactical upgrades, and bug resolutions that align with our terminal-native, zero-bloat philosophy.
 
-## 🐛 Bug Reports & Feature Requests
-If you find a bug or have a suggestion for a new feature (like a new cat breed or toy!), please open an issue in the GitHub repository. Provide as much detail as possible.
+---
 
-## 🛠️ Local Development
+## // ANOMALY REPORTS & FEATURE PROPOSALS
 
-1. **Fork and Clone**: Fork the repository and clone it to your local machine.
-2. **Setup Environment**: Ensure you have Go 1.21+ installed.
-3. **Run tests**: Make sure all tests pass before making your changes by running `make test` or `go test ./...`.
-4. **Create a branch**: Make your changes in a new git branch:
+If you identify a bug or wish to propose a new ASCII integration (such as a new feline archetype or tactical environment), please open an issue in the repository. Provide comprehensive reproduction steps and execution logs. Ambiguity is not tolerated.
+
+---
+
+## // LOCAL DEVELOPMENT SEQUENCE
+
+1. **Fork and Clone**: Secure your own branch of the repository locally.
+2. **Setup Environment**: Ensure Go 1.21+ is active in your PATH.
+3. **Run Diagnostics**: Before pushing changes, verify integrity by executing `make test` or `go test ./...`. All tests must pass.
+4. **Create a Vector**: Branch off main:
    ```bash
-   git checkout -b my-feature-branch
+   git checkout -b feature/your-tactical-upgrade
    ```
-5. **Commit your changes**: Write clear and descriptive commit messages.
-6. **Push to your fork**:
+5. **Commit Modifications**: Use strict, imperative commit messages (e.g., "Add syntax highlighting to diary command").
+6. **Push Vector**:
    ```bash
-   git push origin my-feature-branch
+   git push origin feature/your-tactical-upgrade
    ```
-7. **Submit a Pull Request**: Go to the original repository and open a Pull Request. Provide a clear description of the problem your PR solves or the feature it adds.
+7. **Initialize Pull Request**: Submit your PR with a thorough explanation of the payload.
 
-## 🎨 Adding New ASCII Art
-If you are adding new Breeds, Toys, or Environments, please ensure they fit within the existing 26-character width rendering boundaries in `cmd/start.go`.
+---
 
-Happy coding, and stay cozy!
+## // ASCII ART ASSET INTEGRATION
+
+If you are expanding the ASCII Marketplace (adding new Breeds, Toys, or Environments), you must strictly adhere to the layout geometry. All assets must fit within a fixed 26-character width boundary to maintain cross-terminal alignment in `cmd/start.go`.
+
+**Execution is everything. Stay focused.**

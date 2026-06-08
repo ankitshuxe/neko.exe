@@ -20,9 +20,8 @@ import (
 )
 
 var (
-	monoColor = lipgloss.Color("#EADDCE")
+	monoColor = lipgloss.Color("#E4D8C8")
 	monoStyle = lipgloss.NewStyle().Foreground(monoColor)
-
 )
 
 type timerModel struct {
@@ -336,7 +335,7 @@ var startCmd = &cobra.Command{
 
 		fm := finalModel.(timerModel)
 		if fm.status == "startled" {
-			redStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#FF0000"))
+			redStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#F05522"))
 			fmt.Println(redStyle.Render("\n    (=>.<=) Session canceled."))
 
 			penaltyMsg := ""
@@ -359,7 +358,7 @@ var startCmd = &cobra.Command{
 					break
 				}
 			}
-			greenStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#00FF00"))
+			greenStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#F05522"))
 			fmt.Println(greenStyle.Render(fmt.Sprintf("\n    (=^ω^=) Session completed! +%d Fish Coins", minutes)))
 		}
 	},
@@ -434,7 +433,7 @@ var breakCmd = &cobra.Command{
 
 		fm := finalModel.(timerModel)
 		if fm.status == "startled" {
-			redStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#FF0000"))
+			redStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#F05522"))
 			fmt.Println(redStyle.Render("\n    (=>.<=) Break canceled."))
 			os.Exit(1)
 		} else if fm.status == "rested" {
@@ -449,7 +448,7 @@ var breakCmd = &cobra.Command{
 				}
 			}
 			
-			greenStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#00FF00"))
+			greenStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#F05522"))
 			fmt.Println(greenStyle.Render("\n    (=^ω^=) Break completed!"))
 		}
 	},

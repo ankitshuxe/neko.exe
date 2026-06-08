@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --bg-page: #E4D8C8; /* Darker cream for the background */
+  --bg-card: #F5EBE0; /* Lighter cream for the top card */
+  --accent-orange: #F05522; /* Vibrant burnt orange */
+  --text-dark: #1A1A1A; /* Near black for contrast */
+}
+
+@theme inline {
+  --color-page: var(--bg-page);
+  --color-card: var(--bg-card);
+  --color-accent: var(--accent-orange);
+  --color-foreground: var(--text-dark);
+  --color-border: var(--text-dark);
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-dark);
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  overflow-x: hidden;
+  /* Graph paper pattern */
+  background-image: 
+    linear-gradient(to right, rgba(26, 26, 26, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26, 26, 26, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+h1, h2, h3, h4, .font-sans {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+}
+
+.border-brutalist {
+  border: 1px solid var(--text-dark);
+}
+
+.border-b-brutalist {
+  border-bottom: 1px solid var(--text-dark);
+}
+
+.border-r-brutalist {
+  border-right: 1px solid var(--text-dark);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* Corner crosshairs for brutalist containers */
+.crosshair-corners {
+  position: relative;
+}
+.crosshair-corners::before,
+.crosshair-corners::after {
+  content: "+";
+  position: absolute;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--text-dark);
+}
+.crosshair-corners::before {
+  top: -7px;
+  left: -4px;
+}
+.crosshair-corners::after {
+  bottom: -7px;
+  right: -4px;
+}
+
+.crosshair-corners-orange::before,
+.crosshair-corners-orange::after {
+  color: var(--accent-orange);
+}

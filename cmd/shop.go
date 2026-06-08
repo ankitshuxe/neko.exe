@@ -64,7 +64,7 @@ var shopCmd = &cobra.Command{
 		}
 
 		fmt.Println()
-		titleStyle := lipgloss.NewStyle().Padding(0, 1).Foreground(lipgloss.Color("#FFD700")).Bold(true)
+		titleStyle := lipgloss.NewStyle().Padding(0, 1).Foreground(lipgloss.Color("#F05522")).Bold(true)
 		fmt.Println(titleStyle.Render(fmt.Sprintf("=== NEKO SHOP (Fish Coins: %d) ===", history.FishCoins)))
 		fmt.Println("Use 'neko shop buy [item_id]' to purchase!")
 		fmt.Println()
@@ -140,7 +140,7 @@ var buyCmd = &cobra.Command{
 		history.PurchasedItems = append(history.PurchasedItems, itemID)
 		_ = storage.SaveHistory(history)
 
-		successStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#00FF00"))
+		successStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#F05522"))
 		fmt.Println(successStyle.Render(fmt.Sprintf("Successfully purchased %s! (-%d Fish Coins)", targetItem.Name, targetItem.Cost)))
 	},
 }
@@ -195,7 +195,7 @@ var equipCmd = &cobra.Command{
 		}
 
 		_ = storage.SaveHistory(history)
-		successStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#00FF00"))
+		successStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("#F05522"))
 		fmt.Println(successStyle.Render(fmt.Sprintf("Successfully equipped %s!", targetItem.Name)))
 	},
 }

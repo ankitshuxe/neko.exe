@@ -43,7 +43,7 @@ var statsCmd = &cobra.Command{
 			}
 		}
 
-		titleStyle := lipgloss.NewStyle().Padding(1, 0, 1, 0).Foreground(lipgloss.Color("#FFD700")).Bold(true)
+		titleStyle := lipgloss.NewStyle().Padding(1, 0, 1, 0).Foreground(lipgloss.Color("#F05522")).Bold(true)
 		fmt.Println(titleStyle.Render("=== 30-DAY FOCUS STATS ==="))
 
 		if totalMinutes30 == 0 {
@@ -76,11 +76,11 @@ var statsCmd = &cobra.Command{
 					bar += "█"
 				}
 
-				color := "#00FF00" // Default green
+				color := "#F05522" // Default orange
 				if tag == "untagged" {
 					color = "#888888"
 				} else if len(tag) > 0 {
-					colors := []string{"#FF5733", "#33FF57", "#3357FF", "#F033FF", "#33FFF0", "#FFC300"}
+					colors := []string{"#F05522", "#E4D8C8", "#D9A05B", "#903D1A", "#C28F5A"}
 					color = colors[len(tag)%len(colors)]
 				}
 
