@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Neko</h1>
+  <h1>[neko.exe]</h1>
   <p><b>A cozy, gamified, terminal-based Pomodoro pet.</b></p>
   
   [![Go Report Card](https://goreportcard.com/badge/github.com/ankitshuxe/neko.exe)](https://goreportcard.com/report/github.com/ankitshuxe/neko.exe)
