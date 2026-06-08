@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"neko/storage"
+	"github.com/ankitshuxe/neko.exe/storage"
 	"os"
 	"sort"
 	"time"

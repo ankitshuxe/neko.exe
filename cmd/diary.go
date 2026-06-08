@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"neko/storage"
+	"github.com/ankitshuxe/neko.exe/storage"
 	"fmt"
 	"os"
 	"strings"

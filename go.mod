@@ -1,4 +1,4 @@
-module neko
+module github.com/ankitshuxe/neko.exe
 
 go 1.25.0
 

@@ -1,6 +1,6 @@
 package main
 
-import "neko/cmd"
+import "github.com/ankitshuxe/neko.exe/cmd"
 
 func main() {
 	cmd.Execute()
