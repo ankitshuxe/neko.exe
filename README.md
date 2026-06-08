@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Neko 🐾</h1>
+  <h1>Neko</h1>
   <p><b>A cozy, gamified, terminal-based Pomodoro pet.</b></p>
   
   [![Go Report Card](https://goreportcard.com/badge/github.com/ankitshuxe/neko.exe)](https://goreportcard.com/report/github.com/ankitshuxe/neko.exe)
@@ -14,7 +14,7 @@
 
 ---
 
-## ✨ Features
+## Features
 
 - **Gamified Focus**: Earn 1 "Fish Coin" for every minute of uninterrupted focus time. But beware, canceling your session early will startle the cat and cost you a coin!
 - **The Neko Shop**: Spend your hard-earned Fish Coins to unlock up to 30 unique items, including new Cat Breeds (Sphynx, Persian, Galactic), Environments (Cardboard Castle, Window Sill), and Toys (Laser Pointer, Yarn Ball).
@@ -24,7 +24,7 @@
 
 ---
 
-## 🚀 Installation
+## Installation
 
 There are multiple ways to install Neko depending on your platform and preferences.
 
@@ -51,11 +51,11 @@ make build
 
 ---
 
-## 🎮 How to Play (Usage)
+## How to Play (Usage)
 
 Simply run `neko` with no arguments to see the beautiful welcome dashboard!
 
-### ⏱️ Timers
+### Timers
 - **Start a Focus Session**: `neko start [minutes]`
   - Example: `neko start 45 -t coding -s rain`
   - Flags: `-t` to tag your session, `-s` to play ambient sound (`purr`, `rain`, `lofi`).
@@ -64,7 +64,7 @@ Simply run `neko` with no arguments to see the beautiful welcome dashboard!
 
 *(During any session, press `p` to pause/resume, or `q` to quit).*
 
-### 🛍️ Economy & Customization
+### Economy & Customization
 - **View the Shop**: `neko shop`
   - See your Fish Coin balance and browse the available items.
 - **Buy an Item**: `neko shop buy [item_id]`
@@ -72,7 +72,7 @@ Simply run `neko` with no arguments to see the beautiful welcome dashboard!
 - **Equip an Item**: `neko shop equip [item_id]`
   - Swap out your current breed, toy, or environment to customize your active timer!
 
-### 📊 Analytics
+### Analytics
 - **Daily Log**: `neko diary`
   - View today's focus blocks grouped by your custom tags.
 - **Monthly Stats**: `neko stats`
@@ -80,7 +80,7 @@ Simply run `neko` with no arguments to see the beautiful welcome dashboard!
 
 ---
 
-## 💾 Data Persistence & Security
+## Data Persistence & Security
 
 Your coins, shop inventory, and focus history are automatically saved securely in your computer's native user configuration directory (e.g., `~/.config/neko/history.json` or `%AppData%\neko\history.json`).
 
@@ -88,6 +88,6 @@ Your coins, shop inventory, and focus history are automatically saved securely i
 
 ---
 
-## 🤝 Contributing
+## Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](../../issues).
 Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
